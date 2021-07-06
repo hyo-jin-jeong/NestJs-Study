@@ -1,7 +1,7 @@
 # NestJs
 Learning NestJs by making an enterprise ready API
 
-## nest-study folder 📁 
+##  📁 nest-study folder
 ### 노마드 코더의 Nest.js 강의 공부
 https://nomadcoders.co/nestjs-fundamentals
 
