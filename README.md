@@ -15,3 +15,7 @@ https://nomadcoders.co/nestjs-fundamentals
 #### 3 UNIT TESTING
 - jest을 사용
 #### 4 E2E TESTING
+
+
+## nest-typeorm folder 📁
+### typeorm 
