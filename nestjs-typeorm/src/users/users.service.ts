@@ -20,16 +20,19 @@ export class UsersService {
     return this.usersRepository.findOne(id);
   }
 
-  async create(userData: CreateUserDto): Promise<void> {
-    console.log(userData)
-    await this.usersRepository.save(userData);
+  create(userData: CreateUserDto): Promise<User> {
+    return this.usersRepository.save(userData);
   }
 
   async remove(id: number): Promise<void> {
-    await this.usersRepository.delete(id);
+    this.usersRepository.delete(id);
   }
 
-  async update(id: number, userData: UpdateUserDto): Promise<void> {
-    await this.usersRepository.update({id:id},userData)
+  async update(id: number, userData: UpdateUserDto): Promise<UpdateUserDto> {
+    const userResult = await this.usersRepository.update({ id: id }, userData)
+    if (userResult['affected'] > 0) {
+      return userData
+    }
+    return null
   }
 }
