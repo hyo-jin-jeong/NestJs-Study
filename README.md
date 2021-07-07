@@ -19,3 +19,4 @@ https://nomadcoders.co/nestjs-fundamentals
 
 ## nest-typeorm folder 📁
 ### typeorm 실습
+- create, delete, update
