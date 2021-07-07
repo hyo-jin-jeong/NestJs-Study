@@ -18,4 +18,4 @@ https://nomadcoders.co/nestjs-fundamentals
 
 
 ## nest-typeorm folder 📁
-### typeorm 
+### typeorm 실습
