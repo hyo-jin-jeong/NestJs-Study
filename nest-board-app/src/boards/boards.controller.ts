@@ -24,12 +24,12 @@ export class BoardsController {
     createBoard(
         @Body() createBoardDto: CreateBoardDto,
         @GetUser() user: User
-    ): Promise<Board> {
+    ){
         return this.boardService.createBoard(createBoardDto, user);
     }
 
     @Get('/:id')
-    getBoardById(@Param('id') id: number): Promise<Board> {
+    getBoardById(@Param('id') id: number): Promise<Board>{
         return this.boardService.getBoardById(id);
     }
 

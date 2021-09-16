@@ -18,19 +18,18 @@ export class BoardsService {
 
         const boards = await query.getMany();
         return boards;
-        // return this.boardRepository.find({user});
     }
 
-    async getBoardById(id: number): Promise<Board> {
+    async getBoardById(id: number): Promise<Board>{
         const found = await this.boardRepository.findOne(id);
-
+        
         if (!found) {
             throw new NotFoundException(`Can't find Board with id ${id}`);
         }
         return found;
     }
 
-    createBoard(createBoardDto: CreateBoardDto, user: User): Promise<Board>{
+    createBoard(createBoardDto: CreateBoardDto, user: User){
         return this.boardRepository.createBoard(createBoardDto, user);
     }
 
